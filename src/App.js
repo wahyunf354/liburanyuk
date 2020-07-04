@@ -1,8 +1,18 @@
-import React from 'react';
-import 'assets/scss/style.scss';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+// scss
+import "assets/scss/style.scss";
+
+// Component
+import LandingPage from "pages/LandingPage";
 
 function App() {
-  return <div className='App'>hai dunia!</div>;
+  return (
+    <Router>
+      <Route path="/" component={LandingPage}></Route>
+    </Router>
+  );
 }
 
 export default App;
