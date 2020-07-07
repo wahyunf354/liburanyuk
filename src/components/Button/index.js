@@ -71,7 +71,6 @@ const Button = (props) => {
 Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
   onClick: propTypes.func,
-  children: propTypes.string,
   href: propTypes.string,
   target: propTypes.string,
   className: propTypes.string,

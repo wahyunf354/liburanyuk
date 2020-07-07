@@ -5,6 +5,8 @@
 //
 
 .btn {
+  height: 50px;
+  width: 200.34px;
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -16,8 +18,18 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include button-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height,
+    $btn-border-radius
+  );
   @include transition($btn-transition);
+
+  &.btn-shadow {
+    box-shadow: 3px 5px 10px rgba($primary, 0.25);
+  }
 
   @include hover() {
     color: $body-color;
@@ -57,7 +69,6 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-
 //
 // Alternate buttons
 //
@@ -73,7 +84,6 @@ fieldset:disabled a.btn {
     @include button-outline-variant($value);
   }
 }
-
 
 //
 // Link buttons
@@ -104,19 +114,29 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
-
 //
 // Button Sizes
 //
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
 }
-
 
 //
 // Block button
