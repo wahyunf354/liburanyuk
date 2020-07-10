@@ -8,6 +8,7 @@
 //  Font
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import "colorVariables";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -208,5 +209,43 @@ section {
         transform: scale(1);
       }
     }
+  }
+}
+
+.testimonial-hero,
+.testimonial-hero img {
+  width: 430px;
+  height: 500px;
+}
+
+footer {
+  border-top: 1px solid $gray-200;
+  padding-top: 50px;
+
+  .brand-tagline {
+    color: $gray-500;
+    font-weight: 300;
+    margin-top: 8px;
+  }
+
+  .list-group-item {
+    padding: 0.3125rem 0;
+    border: 0;
+    a,
+    span {
+      color: $gray-500;
+      font-weight: 300;
+    }
+    a {
+      @include hover-focus {
+        color: $gray-700;
+        text-decoration: none;
+      }
+    }
+  }
+  .copy-right {
+    padding: 50px 0;
+    font-weight: 300;
+    color: $gray-500;
   }
 }
