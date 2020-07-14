@@ -6,11 +6,13 @@ import "assets/scss/style.scss";
 
 // Component
 import LandingPage from "pages/LandingPage";
+import Example from "pages/Example";
 
 function App() {
   return (
     <Router>
-      <Route path="/" component={LandingPage}></Route>
+      <Route path="/" exact component={LandingPage}></Route>
+      <Route path="/example" component={Example} />
     </Router>
   );
 }
