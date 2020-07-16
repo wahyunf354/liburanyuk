@@ -8,9 +8,10 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
 import formatDate from "utils/formatDate";
-import iconCalender from "assets/icons/Icon_Calender";
+import iconCalender from "assets/icons/Icon_Calender.svg";
 
-const Date = ({ value, placeholder, name, outerClass, onChange }) => {
+const InputDate = (props) => {
+  const { value, placeholder, name, outerClass } = props;
   const [isShowed, setIsShowed] = useState(false);
   const datePickerChange = (value) => {
     const target = {
@@ -19,7 +20,7 @@ const Date = ({ value, placeholder, name, outerClass, onChange }) => {
         name: name,
       },
     };
-    onChange(target);
+    props.onChange(target);
   };
 
   useEffect(() => {
@@ -78,11 +79,11 @@ const Date = ({ value, placeholder, name, outerClass, onChange }) => {
   );
 };
 
-Date.propTypes = {
+InputDate.propTypes = {
   value: propTypes.object,
   onChange: propTypes.func,
   placeholder: propTypes.string,
   outerClass: propTypes.object,
 };
 
-export default Date;
+export default InputDate;

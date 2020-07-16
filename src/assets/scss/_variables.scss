@@ -3,7 +3,6 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
@@ -1060,7 +1059,7 @@ $breadcrumb-font-size: null !default;
 
 $breadcrumb-padding-y: 0.75rem !default;
 $breadcrumb-padding-x: 1rem !default;
-$breadcrumb-item-padding: 0.5rem !default;
+$breadcrumb-item-padding: 1rem !default;
 
 $breadcrumb-margin-bottom: 1rem !default;
 

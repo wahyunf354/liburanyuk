@@ -1,29 +1,24 @@
 import React, { Component } from "react";
 
 // component
-import InputNumber from "../components/Form/InputNumber";
+import Breadcrumb from "../components/Breadcrumb";
 
-export class Example extends Component {
-  state = {
-    value: "1",
-  };
-
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
+const breadcrumbList = [
+  { pageTitle: "Home", pageHref: "" },
+  { pageTitle: "Home Details", pageHref: "" },
+];
+class Example extends Component {
   render() {
     return (
-      <div>
-        <InputNumber
-          sulfix=" night"
-          isSulfixPruler
-          name="value"
-          value={this.state.value}
-          onChange={this.handleChange}
-          max={30}
-          placeholder="Input"
-        />
+      <div className="container">
+        <div
+          style={{ height: "100vh" }}
+          className="align-items-center justify-content-center"
+        >
+          <div className="col-auto">
+            <Breadcrumb data={breadcrumbList} />
+          </div>
+        </div>
       </div>
     );
   }
