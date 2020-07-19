@@ -8,6 +8,7 @@ import "assets/scss/style.scss";
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
 import Example from "pages/Example";
+import Checkout from "pages/Checkout";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" exact component={LandingPage}></Route>
       <Route path="/properties/:id" exact component={DetailsPage}></Route>
       <Route path="/example" component={Example} />
+      <Route path="/checkout" component={Checkout} />
     </Router>
   );
 }

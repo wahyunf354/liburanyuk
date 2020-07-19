@@ -4,10 +4,10 @@ import Button from "components/Button";
 
 const MostPicked = (props) => {
   return (
-    <section ref={props.refMostPicked} className="container px-4">
+    <section ref={props.refMostPicked} className="container">
       <Fade bottom>
-        <h5 className="mb-4 px-2">Most Picked</h5>
-        <div className="container-grid px-2">
+        <h5 className="mb-4">Most Picked</h5>
+        <div className="container-grid">
           {props.data.map((item, index) => {
             return (
               <div

@@ -111,7 +111,9 @@ section {
 }
 
 .card {
-  height: 100%;
+  &:not(.border) {
+    height: 100%;
+  }
 
   .tag {
     z-index: 3;

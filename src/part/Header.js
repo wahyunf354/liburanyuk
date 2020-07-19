@@ -9,11 +9,25 @@ const Header = (props) => {
     return props.location.pathname === path ? " active" : "";
   };
 
+  if (props.isCenter) {
+    return (
+      <header className="spacing-sm">
+        <div className="container">
+          <div className="navbar navbar-expand-lg navber-linght">
+            <Button className="brand-text-icon mx-auto" type="link" href="">
+              Liburan<span className="text-gray-900">yuk!</span>
+            </Button>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <Fade>
       <header>
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <div className="container">
             <BrandIcon />
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav ml-auto">
@@ -39,8 +53,8 @@ const Header = (props) => {
                 </li>
               </ul>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </header>
     </Fade>
   );

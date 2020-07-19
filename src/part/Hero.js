@@ -23,7 +23,7 @@ function Hero(props) {
   return (
     <Fade bottom>
       <section className="container pt-5">
-        <div className="row align-items-conter px-3">
+        <div className="row align-items-conter">
           <div className="col-auto pr-4" style={{ width: 500 }}>
             <h1 className="font-weight-light line-height-1 mb-3">
               Forget the busy work, <br />
@@ -46,7 +46,7 @@ function Hero(props) {
               Show Me
             </Button>
             <div className="row" style={{ marginTop: 50 }}>
-              <div className="col-auto" style={{ marginRight: 40 }}>
+              <div className="col-auto" style={{ marginRight: 35 }}>
                 <img
                   src={IconTraveler}
                   alt={`${props.data.travelers} Traveler`}
@@ -59,7 +59,7 @@ function Hero(props) {
                 </p>
               </div>
 
-              <div className="col-auto" style={{ marginRight: 40 }}>
+              <div className="col-auto" style={{ marginRight: 35 }}>
                 <img src={IconCities} alt={`${props.data.cities} Cities`} />
                 <p className="mt-3">
                   {formatNumber(props.data.cities)}{" "}

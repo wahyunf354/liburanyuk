@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import propTypes from "prop-types";
 // style
 import "./index.scss";
@@ -15,25 +15,17 @@ const Number = (props) => {
     outerClassName,
     isSulfixPruler,
   } = props;
-  const [inputValue, setInputValue] = useState(`${prefix}${value}${sulfix}`);
 
   const onChange = (e) => {
     let value = String(e.target.value);
-    if (prefix) value = value.replace(prefix);
-    if (sulfix) value = value.replace(sulfix);
 
-    const patterNumeric = RegExp("[0-9]*");
-    const isNumeric = patterNumeric.test(value);
-    if (isNumeric && +value >= min && +value <= max) {
+    if (+value >= min && +value <= max) {
       props.onChange({
         target: {
           name: name,
           value: +value,
         },
       });
-      setInputValue(
-        `${prefix}${value}${sulfix}${isSulfixPruler && +value > 1 ? "s" : ""}`
-      );
     }
   };
 
@@ -72,7 +64,9 @@ const Number = (props) => {
           max={max}
           name={name}
           pattern="[0-9]*"
-          value={inputValue}
+          value={`${prefix}${value}${sulfix}${
+            isSulfixPruler && +value > 1 ? "s" : ""
+          }`}
           placeholder={placeholder ? placeholder : "0"}
           onChange={onChange}
         />
