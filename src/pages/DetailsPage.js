@@ -8,8 +8,10 @@ import BookingForm from "part/BookingForm";
 import Categories from "part/Categories";
 import Testimony from "part/Testimony";
 import Footer from "part/Footer";
+import { connect } from "react-redux";
+import { checkoutBooking } from "store/actions/checkout";
 
-export default class DetailsPage extends Component {
+class DetailsPage extends Component {
   componentDidMount() {
     window.title = "Details Page";
     window.scrollTo(0, 0);
@@ -31,7 +33,10 @@ export default class DetailsPage extends Component {
               <PageDetailDescription data={itemDetails} />
             </div>
             <div className="col-5">
-              <BookingForm itemDetails={itemDetails} />
+              <BookingForm
+                itemDetails={itemDetails}
+                startBooking={this.props.checkoutBooking}
+              />
             </div>
           </div>
         </div>
@@ -42,3 +47,5 @@ export default class DetailsPage extends Component {
     );
   }
 }
+
+export default connect(null, { checkoutBooking })(DetailsPage);

@@ -25,7 +25,7 @@ const MostPicked = (props) => {
                     </div>
                     <figure className="image-wrapper">
                       <img
-                        src={item.imageUrl}
+                        src={`${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`}
                         alt={item.name}
                         className="img-cover"
                       />
@@ -36,7 +36,7 @@ const MostPicked = (props) => {
                         className="stretched-link d-block text-white"
                         href={`/properties/${item._id}`}
                       >
-                        <h5>{item.name}</h5>
+                        <h5>{item.title}</h5>
                       </Button>
                       <span className="font-weight-light">
                         {item.city}, {item.country}

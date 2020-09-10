@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add react-reveal
+  /usr/local/bin/node /usr/local/bin/yarn add dotenv
 
 PATH: 
-  /home/fadil/.pyenv/plugins/pyenv-virtualenv/shims:/home/fadil/.pyenv/shims:/home/fadil/.pyenv/bin:/opt/lampp:/opt/lampp/bin:/var/run/mysqld:/opt/mongodb/bin:~/.composer/vendor/bin:/opt/java/jdk-14.0.1+7/bin:/home/fadil/.composer/vendor/bin:/home/fadil/.pyenv/shims:/home/fadil/.pyenv/bin:/home/fadil/bin:/home/fadil/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fadil/Android/Sdk/emulator:/home/fadil/Android/Sdk/tools:/home/fadil/Android/Sdk/tools/bin:/home/fadil/Android/Sdk/platform-tools:/homr/fadil/Android/Sdk/emulator:/opt/flutter/flutter/bin
+  /home/fadil/.pyenv/plugins/pyenv-virtualenv/shims:/home/fadil/.pyenv/shims:/home/fadil/.pyenv/bin:/opt/lampp:/opt/lampp/bin:/var/run/mysqld:/opt/mongodb/bin:~/.composer/vendor/bin:/opt/java/jdk-14.0.1+7/bin:/home/fadil/bin:/home/fadil/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fadil/Android/Sdk/emulator:/home/fadil/Android/Sdk/tools:/home/fadil/Android/Sdk/tools/bin:/home/fadil/Android/Sdk/platform-tools:/homr/fadil/Android/Sdk/emulator:/opt/flutter/flutter/bin
 
 Yarn version: 
   1.22.4
@@ -35,11 +35,19 @@ npm manifest:
       "@testing-library/jest-dom": "^4.2.4",
       "@testing-library/react": "^9.3.2",
       "@testing-library/user-event": "^7.1.2",
+      "axios": "^0.20.0",
+      "date-fns": "^2.14.0",
       "node-sass": "^4.14.1",
       "react": "^16.13.1",
+      "react-date-range": "^1.0.3",
       "react-dom": "^16.13.1",
+      "react-html-parser": "^2.0.2",
+      "react-redux": "^7.2.1",
+      "react-reveal": "^1.2.2",
       "react-router-dom": "^5.2.0",
-      "react-scripts": "3.4.1"
+      "react-scripts": "3.4.1",
+      "redux": "^4.0.5",
+      "redux-thunk": "^2.3.0"
     },
     "scripts": {
       "start": "react-scripts start",

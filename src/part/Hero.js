@@ -47,10 +47,7 @@ function Hero(props) {
             </Button>
             <div className="row" style={{ marginTop: 50 }}>
               <div className="col-auto" style={{ marginRight: 35 }}>
-                <img
-                  src={IconTraveler}
-                  alt={`${props.data.travelers} Traveler`}
-                />
+                <img src={IconTraveler} alt={` Traveler`} />
                 <p className="mt-3">
                   {formatNumber(props.data.travelers)}{" "}
                   <span className="font-weight-light text-gray-500">

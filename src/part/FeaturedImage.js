@@ -18,7 +18,7 @@ const FeaturedImage = ({ data }) => {
                   <figure className="image-wrapper">
                     <img
                       src={item.url}
-                      alt={`image-${item._id}`}
+                      alt={`pic-${item._id}`}
                       className="img-cover"
                     />
                   </figure>

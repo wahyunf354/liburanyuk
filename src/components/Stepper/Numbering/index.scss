@@ -1,0 +1,71 @@
+@import "../../../assets/scss/colorVariables";
+
+$stepperMainColor: $gray-200;
+$size: 50px;
+
+ol.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    color: $white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      width: $size;
+      height: $size;
+      background-image: url('data:image/svg+xml;utf8,<svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9.5L9.33089 17.5477C10.0653 18.3539 11.3103 18.4231 12.1296 17.7032L20.3269 10.5L30 2" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $orange;
+      transform: scale(1);
+      transition: 0.35s transform ease-in-out;
+      border-radius: $size;
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+      &::before {
+        content: "";
+        z-index: -2;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 60px;
+        height: 1px;
+        background-color: $stepperMainColor;
+      }
+    }
+
+    &.active {
+      &::after {
+        z-index: -1;
+        background: $white;
+        border: 1px solid $stepperMainColor;
+        transform: scale(1.2);
+      }
+      background-color: $stepperMainColor;
+      color: $gray-500;
+      & ~ li {
+        color: $gray-500;
+        background: $stepperMainColor;
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
