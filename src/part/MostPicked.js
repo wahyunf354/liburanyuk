@@ -20,7 +20,7 @@ const MostPicked = (props) => {
                       ${item.price}
                       <span className="font-weight-light">
                         {" "}
-                        per {item.unit}
+                        per {item.unit ? item.unit : "night"}
                       </span>
                     </div>
                     <figure className="image-wrapper">

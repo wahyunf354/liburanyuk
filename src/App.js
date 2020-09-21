@@ -16,8 +16,8 @@ function App() {
       <Route path="/" exact component={LandingPage}></Route>
       <Route path="/properties/:id" exact component={DetailsPage}></Route>
       <Route path="/example" exact component={Example} />
-      <Route path="/checkout" exact component={Checkout} />
-    </Router>
+	<Route path="/checkout" exact component={Checkout} />
+</Router>
   );
 }
 

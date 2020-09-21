@@ -102,7 +102,15 @@ section {
   object-fit: cover;
   height: 100%;
   width: 100%;
+
+  &--activity, &--category {
+    max-height: 170px;
+    object-fit: cover;
+    width: 100%;
+  }
 }
+
+
 
 .img-contain {
   object-fit: contain;
