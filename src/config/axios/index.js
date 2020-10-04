@@ -1,7 +1,13 @@
 import axios from 'axios';
+import errorResponseHandler from './errorResponseHandler';
 
 const instence = axios.create({
   baseURL: `${process.env.REACT_APP_HOST}/api/v1/member`
 })
+
+instence.interceptors.response.use(
+  (response) => response,
+  errorResponseHandler
+)
 
 export default instence;

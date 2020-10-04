@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add react-responsive-animate-navbar
+  /usr/local/bin/node /usr/local/bin/yarn add react-toastify
 
 PATH: 
-  /home/fadil/.pyenv/plugins/pyenv-virtualenv/shims:/home/fadil/.pyenv/shims:/home/fadil/.pyenv/bin:/opt/lampp:/opt/lampp/bin:/var/run/mysqld:/opt/mongodb/bin:~/.composer/vendor/bin:/opt/java/jdk-14.0.1+7/bin:/home/fadil/bin:/home/fadil/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fadil/Android/Sdk/emulator:/home/fadil/Android/Sdk/tools:/home/fadil/Android/Sdk/tools/bin:/home/fadil/Android/Sdk/platform-tools:/homr/fadil/Android/Sdk/emulator:/opt/flutter/flutter/bin:/home/fadil/.vimpkg/bin
+  /home/fadil/.pyenv/plugins/pyenv-virtualenv/shims:/home/fadil/.pyenv/shims:/home/fadil/.pyenv/bin:/opt/lampp:/opt/lampp/bin:/var/run/mysqld:/opt/mongodb/bin:~/.composer/vendor/bin:/opt/java/jdk-14.0.1+7/bin:/home/fadil/bin:/home/fadil/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fadil/Android/Sdk/emulator:/home/fadil/Android/Sdk/tools:/home/fadil/Android/Sdk/tools/bin:/home/fadil/Android/Sdk/platform-tools:/homr/fadil/Android/Sdk/emulator:/opt/flutter/flutter/bin:/home/fadil/.vimpkg/bin:/home/fadil/.fzf/bin
 
 Yarn version: 
   1.22.4

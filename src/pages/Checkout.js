@@ -64,10 +64,7 @@ class Checkout extends Component {
     console.log("payload form Data : ", payload);
 
     this.props
-      .bookingPost(
-        `/booking-page`,
-        payload
-      )
+      .bookingPost(`/booking-page`, payload)
       .then(() => {
         nextStep();
       })
@@ -85,8 +82,8 @@ class Checkout extends Component {
           className="row justify-content-center align-items-center text-center"
           style={{ height: "100vh" }}
         >
-        <div>
-          <p>Pilih Kamar Dulu</p>
+          <div>
+            <p>Pilih Kamar Dulu</p>
             <Button
               className="btn"
               style={{ margin: 20 }}
