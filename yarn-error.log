@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add react-toastify
+  /usr/local/bin/node /usr/local/bin/yarn install
 
 PATH: 
   /home/fadil/.pyenv/plugins/pyenv-virtualenv/shims:/home/fadil/.pyenv/shims:/home/fadil/.pyenv/bin:/opt/lampp:/opt/lampp/bin:/var/run/mysqld:/opt/mongodb/bin:~/.composer/vendor/bin:/opt/java/jdk-14.0.1+7/bin:/home/fadil/bin:/home/fadil/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fadil/Android/Sdk/emulator:/home/fadil/Android/Sdk/tools:/home/fadil/Android/Sdk/tools/bin:/home/fadil/Android/Sdk/platform-tools:/homr/fadil/Android/Sdk/emulator:/opt/flutter/flutter/bin:/home/fadil/.vimpkg/bin:/home/fadil/.fzf/bin
@@ -45,7 +45,8 @@ npm manifest:
       "react-redux": "^7.2.1",
       "react-reveal": "^1.2.2",
       "react-router-dom": "^5.2.0",
-      "react-scripts": "3.4.1",
+      "react-scripts": "^3.4.3",
+      "react-toastify": "^6.0.8",
       "redux": "^4.0.5",
       "redux-thunk": "^2.3.0"
     },
@@ -53,7 +54,9 @@ npm manifest:
       "start": "react-scripts start",
       "build": "react-scripts build",
       "test": "react-scripts test",
-      "eject": "react-scripts eject"
+      "eject": "react-scripts eject",
+      "lint:fix": "eslint src/*.js --fix",
+      "lint": "eslint src/*.js"
     },
     "eslintConfig": {
       "extends": "react-app"
@@ -69,7 +72,8 @@ npm manifest:
         "last 1 firefox version",
         "last 1 safari version"
       ]
-    }
+    },
+    "devDependencies": {}
   }
 
 yarn manifest: 
