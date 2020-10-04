@@ -15,7 +15,8 @@ import BookingInformation from "part/Checkout/BookingInformation";
 import Payment from "part/Checkout/Payment";
 import Completed from "part/Checkout/Completed";
 
-import itemDetails from "json/itemDetails.json";
+import itemDetails from "../json/itemDetails.json";
+import { bookingPost } from "../store/actions/booking.js";
 
 class Checkout extends Component {
   state = {
@@ -23,10 +24,10 @@ class Checkout extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      phone: "",
+      phoneNumber: "",
       proofPayment: "",
-      bankName: "",
-      bankHolder: "",
+      accountHolder: "",
+      bankFrom: "",
     },
   };
 
@@ -43,23 +44,56 @@ class Checkout extends Component {
     window.scroll(0, 0);
   }
 
-  render() {
+  handleBookingPost = (nextStep) => {
     const { data } = this.state;
     const { checkout } = this.props;
 
+    const payload = new FormData();
+    payload.append("firstName", data.firstName);
+    payload.append("lastName", data.lastName);
+    payload.append("idItem", checkout._id);
+    payload.append("email", data.email);
+    payload.append("duration", checkout.duration);
+    payload.append("bookingDateStart", checkout.date.startDate);
+    payload.append("bookingDateEnd", checkout.date.endDate);
+    payload.append("phoneNumber", data.phoneNumber);
+    payload.append("accountHolder", data.accountHolder);
+    payload.append("bankFrom", data.bankFrom);
+    payload.append("image", data.proofPayment[0]);
+    console.log("data : ", data);
+    console.log("payload form Data : ", payload);
+
+    this.props
+      .bookingPost(
+        `/booking-page`,
+        payload
+      )
+      .then(() => {
+        nextStep();
+      })
+      .catch((err) => console.log(err));
+  };
+
+  render() {
+    const { data } = this.state;
+    const { checkout, page } = this.props;
+
+    if (!page) return null;
     if (!checkout.duration) {
       return (
         <div
           className="row justify-content-center align-items-center text-center"
           style={{ height: "100vh" }}
         >
-          <div className="col-md-3">
-            <p>Pilih Kamar Dulu</p>
+        <div>
+          <p>Pilih Kamar Dulu</p>
             <Button
               className="btn"
               style={{ margin: 20 }}
-              type="link"
-              href="/"
+              type="button"
+              onClick={() => {
+                this.props.history.goBack();
+              }}
               isLight
             >
               Back
@@ -77,7 +111,7 @@ class Checkout extends Component {
           <BookingInformation
             data={data}
             checkout={checkout}
-            itemDetails={itemDetails}
+            itemDetails={page[checkout._id]}
             onChange={this.onChange}
           />
         ),
@@ -89,7 +123,7 @@ class Checkout extends Component {
           <Payment
             data={data}
             checkout={checkout}
-            itemDetails={itemDetails}
+            itemDetails={page[checkout._id]}
             onChange={this.onChange}
           />
         ),
@@ -157,7 +191,7 @@ class Checkout extends Component {
                           isBlock
                           isPrimary
                           hasShadow
-                          onClick={nextStep}
+                          onClick={() => this.handleBookingPost(nextStep)}
                         >
                           Continue to Book
                         </Button>
@@ -185,8 +219,7 @@ class Checkout extends Component {
                     hasShadow
                     href=""
                   >
-                    {" "}
-                    Back to Home{" "}
+                    Back to Home
                   </Button>
                 </Controller>
               )}
@@ -200,6 +233,7 @@ class Checkout extends Component {
 
 const mapStateToProps = (state) => ({
   checkout: state.checkout,
+  page: state.page,
 });
 
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps, { bookingPost })(Checkout);

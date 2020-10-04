@@ -17,7 +17,7 @@ const Categories = ({ data }) => {
                 return (
                   <div
                     className="item column-3 row-1"
-                    key={`category-${index1}-item-${index2}`}
+                    key={`${index1}-${index2}`}
                   >
                     <Fade bottom delay={300 * index2}>
                       <Button

@@ -2,7 +2,7 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import CompletedImage from "assets/image/Illustration.svg";
 
-export default function Completed() {
+function Completed() {
   return (
     <Fade>
       <div className="container" style={{ marginBottom: 30 }}>
@@ -23,3 +23,5 @@ export default function Completed() {
     </Fade>
   );
 }
+
+export default Completed;

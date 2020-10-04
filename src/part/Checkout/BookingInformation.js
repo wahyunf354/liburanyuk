@@ -18,7 +18,7 @@ export default function BookingInformation({
               <div className="card">
                 <figure className="image-wrapper" style={{ height: 270 }}>
                   <img
-                    src={itemDetails.imageUrls[0].url}
+                    src={`${process.env.REACT_APP_HOST}/${itemDetails.imageId[0].imageUrl}`}
                     alt={itemDetails.name}
                     className="img-cover"
                   />
@@ -26,7 +26,7 @@ export default function BookingInformation({
                 <div className="row align-items-center mt-2">
                   <div className="col">
                     <div className="mate-wrapper">
-                      <h5>{itemDetails.name}</h5>
+                      <h5>{itemDetails.title}</h5>
                       <span className="text-gray-500 font-weight-light">
                         {itemDetails.city}, {itemDetails.country}
                       </span>
@@ -77,7 +77,7 @@ export default function BookingInformation({
               <InputText
                 id="phone"
                 type="tel"
-                name="phone"
+                name="phoneNumber"
                 value={data.phone}
                 onChange={onChange}
               />

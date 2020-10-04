@@ -22,7 +22,7 @@ class LandingPage extends Component {
     window.scrollTo(0, 0);
     if (!this.props.page.landingPage)
       this.props.fetchDataPage(
-        `${process.env.REACT_APP_HOST}/api/v1/member/landing-page`,
+        `/landing-page`,
         "landingPage"
       );
   }
