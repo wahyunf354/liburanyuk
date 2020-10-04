@@ -60,15 +60,10 @@ class Checkout extends Component {
     payload.append("accountHolder", data.accountHolder);
     payload.append("bankFrom", data.bankFrom);
     payload.append("image", data.proofPayment[0]);
-    console.log("data : ", data);
-    console.log("payload form Data : ", payload);
 
-    this.props
-      .bookingPost(`/booking-page`, payload)
-      .then(() => {
-        nextStep();
-      })
-      .catch((err) => console.log(err));
+    this.props.bookingPost(`/booking-page`, payload).then(() => {
+      nextStep();
+    });
   };
 
   render() {

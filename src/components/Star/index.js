@@ -5,7 +5,6 @@ import "./index.scss";
 
 const Star = ({ value, height, width, spacing, className }) => {
   const decimals = Number(value) % 1;
-  console.log(decimals);
 
   const star = [];
   let leftPos = 0;
