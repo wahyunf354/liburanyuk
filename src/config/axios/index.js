@@ -5,7 +5,7 @@ const instence = axios.create({
   baseURL: `${process.env.REACT_APP_HOST}/api/v1/member`,
   headers: {
     "Access-Control-Allow-Credentials": "true",
-    "Access-Control-Allow-Origin": `${process.env.REACT_APP_HOST}`,
+    "Access-Control-Allow-Origin": `https://liburanyuk.vercel.app/`,
   },
 });
 
